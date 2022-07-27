@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>VR COFFEE SHOP</title>
+    <style>
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Playfair Display";
+            letter-spacing: 5px;
+        }
+
+
+
+        .container1 {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin: auto;
+            filter: url('#goo');
+            animation: rotate-move 2s ease-in-out infinite;
+        }
+
+        .dot {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background-color: #000;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        .dot-3 {
+            background-color: #f74d75;
+            animation: dot-3-move 2s ease infinite, index 6s ease infinite;
+        }
+
+        .dot-2 {
+            background-color: #10beae;
+            animation: dot-2-move 2s ease infinite, index 6s -4s ease infinite;
+        }
+
+        .dot-1 {
+            background-color: #ffe386;
+            animation: dot-1-move 2s ease infinite, index 6s -2s ease infinite;
+        }
+
+        @keyframes dot-3-move {
+            20% {
+                transform: scale(1)
+            }
+
+            45% {
+                transform: translateY(-18px) scale(.45)
+            }
+
+            60% {
+                transform: translateY(-90px) scale(.45)
+            }
+
+            80% {
+                transform: translateY(-90px) scale(.45)
+            }
+
+            100% {
+                transform: translateY(0px) scale(1)
+            }
+        }
+
+        @keyframes dot-2-move {
+            20% {
+                transform: scale(1)
+            }
+
+            45% {
+                transform: translate(-16px, 12px) scale(.45)
+            }
+
+            60% {
+                transform: translate(-80px, 60px) scale(.45)
+            }
+
+            80% {
+                transform: translate(-80px, 60px) scale(.45)
+            }
+
+            100% {
+                transform: translateY(0px) scale(1)
+            }
+        }
+
+        @keyframes dot-1-move {
+            20% {
+                transform: scale(1)
+            }
+
+            45% {
+                transform: translate(16px, 12px) scale(.45)
+            }
+
+            60% {
+                transform: translate(80px, 60px) scale(.45)
+            }
+
+            80% {
+                transform: translate(80px, 60px) scale(.45)
+            }
+
+            100% {
+                transform: translateY(0px) scale(1)
+            }
+        }
+
+        @keyframes rotate-move {
+            55% {
+                transform: translate(-50%, -50%) rotate(0deg)
+            }
+
+            80% {
+                transform: translate(-50%, -50%) rotate(360deg)
+            }
+
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg)
+            }
+        }
+
+        @keyframes index {
+
+            0%,
+            100% {
+                z-index: 3
+            }
+
+            33.3% {
+                z-index: 2
+            }
+
+            66.6% {
+                z-index: 1
+            }
+        }
+    </style>
+
+
+    <style>
+        .site-name-pr {
+            font-style: italic;
+            font-family: Lobster;
+            font-size: 35px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            line-height: 1.2;
+            text-transform: inherit;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <nav id="nav" class="navbar navbar-expand-lg fixed-top" style="min-height: 90px;background-color:rgba(89, 89, 89, 0.6); color: #f8f9fa;">
+        <div class="container-fluid" style="color: white;">
+            <a href="#home" class="navbar-brand" style="color: #f8f9fa;margin-left: 15%;">
+                <h4 class="site-name-pr">NEUST Virtual Reality Platform for EduTourism</h4>
+            </a>
+          
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" style="color: #f8f9fa;margin-right: 20%;" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" style="color: white;" aria-current="page" href="#">HOME</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="color: white;" href="#">360 VIRTUAL TOUR</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="color: white;" href="#">COFFEE BARISTA COURSE</a>
+              </li>
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
+    
+
+  
+
+
+
+    
+    <!-- Navbar (sit on top) -->
+
+
+    <!-- Header -->
+    <header class="w3-display-container w3-content w3-wide" style="max-width:100%;min-width:100px" id="home">
+        <img class="w3-image" src="./assets/bg.jpg" alt="Hamburger Kape Ecija" width="100%" height="800">
+        <div class="w3-display-bottomleft w3-padding-large w3-opacity">
+            <h1 class="w3-xxlarge">Kape Ecija</h1>
+        </div>
+    </header>
+
+    <!-- Page content -->
+    <div class="w3-content" style="max-width:1100px">
+
+        <!-- About Section -->
+        <div class="w3-row w3-padding-64" id="about">
+            <div class="w3-col m6 w3-padding-large w3-hide-small" style="margin-top: 14%;">
+                <iframe title="NEUST VR Edutourism Official Video" width="530" height="411"
+                    src="https://www.youtube.com/embed/8gYwTwwrCC8?feature=oembed" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen=""></iframe>
+            </div>
+
+            <div class="w3-col m6 w3-padding-large">
+                <h1 class="w3-center">About the VR Edutourism Project</h1><br>
+                <h5 class="w3-center">Tradition since 1889</h5>
+                <p class="w3-large">This project focuses on promoting NEUST-Gabaldon as a center for agricultural and
+                    ecological educational tourism through the development of a virtual reality edutourism experience.
+                    <br>
+                <p>Specifically, it aims<br>
+                    • develop, implement, and promote an alternative system for agricultural and ecological educational
+                    tourism through virtual
+                    reality learning experiences;
+                    <br>• highlight the institution’s agricultural technological innovations and the locale’s natural
+                    and man-made attractions and key cultural resources through virtual reality platform;
+                    <br>• develop and implement virtual reality learning and training programs and lifelong education
+                    programs for local and foreign edutourists;
+                    <br>• integrate global learning into educational tourism products and services; and
+                    <br>• intensify home-border internationalization efforts of the institution by strengthening
+                    partnership and linkages with other HEIs and FHEIs.
+                </p>
+
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Menu Section -->
+        <div class="w3-row w3-padding-64" id="360vr">
+            <div class="w3-col l6 w3-padding-large">
+                <h1 class="w3-center">Online Barista Course with 3D VR</h1><br>
+                <h4>Virtual Reality Experience of Earth to Cup Coffee Production</h4>
+                <p class="w3-text-grey">The edutourism packages included in the VR platform will be designed to reflect
+                    not only international
+                    content and dimension, but also responsiveness to local and cultural issues. These packages can also
+                    be utilized for virtual student learning and mobility activities, in partnership with other local
+                    and foreign HEIs. The University can continuously impart knowledge to edutourists, and cater to
+                    their needs for lifelong learning, while building on international partnerships with foreign higher
+                    education
+                    institutions.</p><br>
+
+
+                <p class="w3-text-grey">The VR edutourism platform can also be used to promote other advocacies in line
+                    with the United Nations’ Sustainable Development Goals through edutourism packages featuring
+                    relevant discussions of glocal issues. Edutour packages such as One with Nature for example, will
+                    give edutourists the opportunity to be virtually immersed in community-based forest resource
+                    management program
+                    and other environmental conservation activities of the University.</p><br>
+
+
+            </div>
+
+            <div class="w3-col l6 w3-padding-large" style="margin-top: 20%;">
+                <img src="./assets/3dvr.png" class="w3-round w3-image w3-opacity-min" alt="Menu" style="width:100%">
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Contact Section -->
+
+        <!-- End page content -->
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-center w3-padding-32" style="background-color: #009999;">
+
+    </footer>
+
+
+    <div id="container1" class="container1">
+        <div class="dot dot-1"></div>
+        <div class="dot dot-2"></div>
+        <div class="dot dot-3"></div>
+    </div>
+
+    <svg id="svg1" xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <defs>
+            <filter id="goo">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -7" />
+            </filter>
+        </defs>
+    </svg>
+
+    <div id="container"></div>
+    <script>
+        $(document).ready(function () {
+            var scroll_pos = 0;
+            $(document).scroll(function () {
+                scroll_pos = $(this).scrollTop();
+                if (scroll_pos > 210) {
+                    $('#nav').css('background-color', '#009999');
+                } else {
+                    $('#nav').css('background-color', 'rgba(89, 89, 89, 0.6)');
+                }
+            });
+        });
+    </script>
+
+    <script type="module" src="bundle.js"></script>
+
+
+
+
+</body>
+
+</html>
